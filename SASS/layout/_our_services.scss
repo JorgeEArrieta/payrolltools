@@ -1,0 +1,54 @@
+.our__services{
+    // Definición y alineación contendor.
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    // Colores.
+    background-color: whitesmoke;
+    color:white;
+
+    @include respond(phone){
+        height: 40vh;
+    }
+
+    &--conteiner{
+        // Definición y alineación contendor.
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        // Medidas del contenedor.
+        height: 50%;
+        width: 50%;
+        margin: 3rem auto;
+        // Colores.
+        color:black;
+        // Efectos.
+        background: rgba( 255, 255, 255, 0.6 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 12px );
+        -webkit-backdrop-filter: blur( 12px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+        @include respond(phone){
+            // Definición y alineación contendor.
+            justify-content: space-evenly;
+            width: 70%;
+            height: 70%;
+        }
+
+        .conteiner--title{
+            // Medidas del contenedor.
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+
+        .conteiner--paragraph{
+            // Medidas del contenedor.
+            margin: 1rem auto;
+            padding: 1.5rem;
+        }
+    }
+
+}

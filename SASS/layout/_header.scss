@@ -1,0 +1,46 @@
+// Menú bar.
+// La barra de menú siempre esta fija.
+
+header{
+    // Definición y alineación contendor.
+    position: fixed;
+    // Medidas del contenedor.
+    width: 100%;
+    z-index: 1;
+}
+
+.header__menu{
+    // Definición y alineación contendor.
+    display: flex;
+    justify-content: space-between;
+    // Medidas del contenedor.
+    height: 10vh;
+    // Colores.
+    background-color: $color-darkblue;
+    color: whitesmoke;
+
+    &--title{
+        // Definición y alineación contendor.
+        display: flex;
+        justify-content:center;
+        align-self: center;
+        // Medidas del contenedor.
+        margin: 0.5rem;    
+    }
+
+    &--menu{
+        // Definición y alineación contendor.
+        display: flex;
+        justify-content:center;
+        align-self: center;
+
+        a,
+        a:link,
+        a:visited,
+        a:focus{
+            text-decoration: none;
+            text-align: center;
+            color:whitesmoke;
+        }
+    }
+}

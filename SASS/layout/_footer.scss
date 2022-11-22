@@ -1,0 +1,76 @@
+.page__footer{
+    // Definición y alineación contendor.
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    // Medidas del contenedor.
+    height: 30vh;
+    // Colores.
+    background-color: black;
+    color: antiquewhite;
+
+    @include respond(phone){
+    // Medidas del contenedor.
+        height: 15vh;
+    }
+
+
+    &--left{
+        // Medidas del contenedor.
+        width: 50%;
+        margin:1rem;
+        padding: 0.5rem;
+        // Efectos.
+        list-style: none;
+        .nav{
+            // Definición y alineación contendor.
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            border-bottom-color: antiquewhite;
+            border-bottom-style: solid;
+            border-bottom-width: 0.2rem;
+            ul{
+                // Efectos.
+                list-style: none;
+                li{
+                    // Definición y alineación contendor.
+                    display: inline-block;
+                    // Medidas del contenedor.
+                    margin-right: 0.8rem;
+                    padding: 0.3rem;
+                }
+            }
+        }
+    }    
+    
+    &--right{
+        // Definición y alineación contendor.
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        // Medidas del contenedor.
+        width: 50%;
+        margin:1rem;
+        padding: 0.5rem;
+        .social--media{
+            // Definición y alineación contendor.
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            // Colores.
+            border-bottom-color: antiquewhite;
+            border-bottom-style: solid;
+            border-bottom-width: 0.2rem;
+            ul{
+                // Efectos.
+                list-style: none;
+                li{
+                    // Definición y alineación contendor.
+                    display: inline-block;
+                    // Medidas del contenedor.
+                    margin-right: 0.8rem;
+                    padding: 0.3rem;
+                }
+            }            
+        }
+    }
+}

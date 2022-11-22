@@ -1,0 +1,145 @@
+.header__menu--menu li{
+    display: inline;
+    list-style: none;
+    margin: 1rem;
+}
+
+// Titulo y slogan del div titúlo.
+.title__page{
+
+    flex-direction: column;
+
+    &--title{
+       @include alignCenter;
+        width: 60%;
+        background-color: $background-grey;
+        opacity: 60%;
+        animation: moveRight 5s;
+
+        @include respond(phone){
+            width: 80%;
+            
+        }
+        
+        h1{
+            color: $color-mediablue;
+            font-size: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            animation: moveRight 5s;
+        }
+    }
+    &--slogan{
+        
+        @include alignCenter;
+        width: 60%;
+        background-color: $background-grey;
+        opacity: 60%;
+        animation: moveLeft 5s;
+        
+        h2{
+            color:$color-mediablue;
+            font-size: 1.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            animation: moveLeft 5s;
+        }
+    }
+}
+
+// Sección acerca de nosotros.
+.about__us{
+    font-family: 'Roboto', sans-serif;
+    
+    &--container{
+        .container--title{
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            
+            h2{
+                font-size: 2rem;
+                @include respond(phone){
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .container--paragraph{
+            p{
+                @include respond(phone){
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+
+// Tipografia del contendor dev-tools.
+.dev__tools{
+    &--container{
+        .dev__tools--title{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            
+            h2{
+                @include respond(phone){
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+// Nuestros servicios.
+.our__services{
+    &--conteiner{
+        .conteiner--title{
+            h2{
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 0.2rem;
+                @include respond(phone){
+                    font-size: 2rem;
+                }
+            }
+
+        }
+
+        .conteiner--paragraph{
+            p{
+                font-family: 'Roboto', sans-serif;
+                text-align: justify;
+                font-size: 1rem;
+                
+                @include respond(phone){
+                    font-size: 1.5rem;
+                }               
+            }
+        }
+    }
+}
+
+// Sección redes sociales.
+.contact__us{
+    .container--title{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+    }
+}
+
+// Footer
+.page__footer{
+    font-size: 0.8rem;
+    
+    @include respond(phone){
+        font-size:1rem;
+    }
+}

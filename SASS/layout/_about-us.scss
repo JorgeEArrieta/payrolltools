@@ -1,0 +1,59 @@
+.about__us{
+    // Definición y alineación contendor.
+    display: flex;
+    justify-content: center;
+    // Medidas del contenedor.
+    height: 70vh;
+    // Colores.
+    background-color: whitesmoke;
+
+    @include respond(phone){
+        // Medidas del contenedor.
+        height: 50vh;
+    }
+
+    &--container{
+        // Definición y alineación contendor.
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: space-around;
+        // Medidas del contenedor.
+        width: 60%;
+        height: 40%;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        // Colores.
+        color:black;        
+        // Efectos.
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 2.5px );
+        -webkit-backdrop-filter: blur( 2.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+        @include respond(phone){
+            // Medidas del contenedor.
+            margin:0;
+            width: 70%;
+        }
+    }
+
+        .container--title{
+            // Medidas del contenedor.
+            margin:0.5rem;
+            padding: 0.1rem;
+            border-bottom-style: solid;
+            border-bottom-width: .2rem;
+            border-bottom-color: whitesmoke;
+        }
+
+        .container--paragraph{
+            margin:0.5rem 1rem;
+            padding: 0.1rem;
+            font-size: 1rem;
+            text-align: justify;
+        }
+}
+

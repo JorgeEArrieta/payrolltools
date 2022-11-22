@@ -1,0 +1,15 @@
+{
+  "name": "payrolltools",
+  "version": "1.0.0",
+  "description": "Pagina oficial de Payroll tools",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Eduardo Arrieta",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

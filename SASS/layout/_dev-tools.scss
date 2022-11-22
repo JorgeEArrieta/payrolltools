@@ -1,0 +1,190 @@
+.dev__tools{
+    // Definición y alineación contendor
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Medidas del contenedor.
+    height: 95vh;
+    // Colores.
+    background-color: whitesmoke;
+
+    @include respond(phone){
+        // Medidas del contenedor.
+        height: 90vh;
+    }
+
+    &--container{
+        // Definición y alineación contendor.
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // Medidas del contenedor.
+        margin: 0.5rem 2rem;
+        height: 100%;
+        // Efectos.
+        background-image: linear-gradient(45deg, $bk_dark_1, $bk_dark_2),
+        url("../img/black-and-white-tables-chairs-people.jpg");
+        border-radius: 1.5rem;
+
+        @include respond(phone){
+            justify-content: center;
+            margin: 1rem;
+
+        }
+        .dev__tools--title{
+            // Definición y alineación contendor
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            // Medidas del contenedor.
+            width: 70%;
+            height: 4.5rem;
+            margin: 0.5rem 3rem 3rem 3rem;
+            // Colores.
+            color:whitesmoke;
+            //Efectos.
+            background-image: linear-gradient(90deg, $bk_dark_3, $bk_dark_4);
+            transform: translateX(0rem) skewX(-12deg);
+            background: rgba( 255, 255, 255, 0.6 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 12px );
+            -webkit-backdrop-filter: blur( 12px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+            @include respond(tab-port){
+            // Definición y alineación contendor
+                align-self: center;
+            // Medidas del contenedor.
+                width: 50%;
+                height: 3rem;
+            }
+
+            @include respond(phone){
+                // Definición y alineación contendor
+                justify-content: space-around;    
+                // Medidas del contenedor.
+                width: 80%;
+                height: 4rem;
+                margin-bottom: 1rem;
+                }
+            
+            h2{
+                // Definición y alineación contendor.
+                justify-self: center;
+                align-self: center;
+                // Efectos.
+                transform: skewX(12deg);
+            }
+        }
+
+        .dev__tools--cards{
+            // Definición y alineación contendor.
+            display: flex;
+            align-self: center;
+            flex-direction: row;
+            // Medidas del contenedor.
+            margin: 1.5rem;
+            height: 70%;
+            width: 70%;
+            
+            @include respond(phone){
+                // Definición y alineación contendor.
+                flex-direction: column;
+                // Medidas del contenedor.
+                margin: 0.5rem;
+                height: 80%;
+                width: 80%;    
+            }
+
+            .card--segundadeduccion{
+                @include card;
+
+                .card--title{
+                    @include cardTitle("../img/calculadora.png");
+
+                    h3{
+                        @include cardTitleH3;
+                        top:55%;
+                        left:20%;
+                        @include respond(phone){
+                            left:44%;
+                        }
+                    }
+                }
+
+                .card--descrip{
+                    @include cardDescrip;
+
+                    p{
+                        @include cardDescripP;
+                    }
+                }
+
+                .card--buttom{
+                    @include cardButtom;
+                }
+            }
+
+            .card--formulario1357{
+                @include card;
+
+                .card--title{
+                    @include cardTitle("../img/excel.png");
+
+                    h3{
+                        @include cardTitleH3;
+                        width: 55%;
+                        top:55%;
+                        left:45%;
+                    }
+                }
+
+                .card--descrip{
+                    @include cardDescrip;
+
+                    p{
+                        @include cardDescripP;
+                    }
+                }
+
+                .card--buttom{
+                    @include cardButtom;
+                }
+            }
+
+            .card--extractorsiradig{
+                @include card;
+                //overflow: hidden;
+
+                .card--title{
+                    @include cardTitle("../img/xml.jpg");
+
+                    h3{
+                        @include cardTitleH3;
+                        display: flex;
+                        align-items: center;
+                        width: 60%;
+                        top:55%;
+                        left:40%;
+                    }
+                }
+
+                .card--descrip{
+                    @include cardDescrip;
+
+                    p{
+                        @include cardDescripP;
+                    }
+                }
+
+                .card--buttom {
+
+                    @include cardButtom;
+                }
+    }
+}
+
+}
+}

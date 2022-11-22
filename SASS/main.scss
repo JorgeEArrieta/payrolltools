@@ -1,0 +1,19 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/_animations";
+@import "base/base";
+@import "base/tipography";
+@import "base/utilities";
+
+@import "components/bg-video";
+
+@import "layout/header";
+@import "layout/about-us";
+@import "layout/dev-tools";
+@import "layout/our_services";
+@import "layout/contact_us";
+@import "layout/footer";
+
+@import "pages/home";

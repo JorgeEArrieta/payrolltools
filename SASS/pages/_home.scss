@@ -1,0 +1,13 @@
+.title__page{
+    // Definición y alineación contendor.
+    position: relative;
+    display: flex;
+    justify-content: center;
+    // Medidas del contenedor.
+    height: 99vh;
+
+    @include respond(phone){
+        // Medidas del contenedor.
+        height: 70vh;
+    }
+}

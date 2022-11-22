@@ -1,0 +1,37 @@
+@keyframes moveLeft{
+    0%{
+        background-color: transparent;
+        color:whitesmoke;
+        opacity: 0%;
+        transform: translateX(-10rem);
+    }
+
+    90%{
+        color:whitesmoke;
+        background-color: transparent;
+    }
+
+    100%{
+        opacity: 60%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+        color:whitesmoke;
+        transform: translateX(10rem);
+        background-color: transparent;
+    }
+
+    90%{
+        color:whitesmoke;
+        background-color: transparent;
+    }
+
+    100%{
+        opacity: 60%;
+        transform: translateX(0);
+    }
+}
