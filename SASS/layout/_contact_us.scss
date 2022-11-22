@@ -8,9 +8,14 @@
     // Colores.
     background-color:whitesmoke;
 
+    
+    @include respond(tab-port){
+        margin: 0;
+    }
+
     @include respond(phone){
         // Medidas del contenedor.
-        height: 30vh;
+        height: 50vh;
     }
 
     .contact__us--container{
@@ -32,8 +37,13 @@
         background-repeat: no-repeat;
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); 
         
-        @include respond(phone){
+        @include respond(tab-port){
+            height: 70%;
             width: 80%;
+        }
+
+        @include respond(phone){
+            width: 90%;
         }
     }
     .container--title{

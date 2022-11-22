@@ -4,13 +4,13 @@
     justify-content: center;
     align-items: center;
     // Medidas del contenedor.
-    height: 95vh;
+    height: 80vh;
     // Colores.
     background-color: whitesmoke;
 
     @include respond(phone){
         // Medidas del contenedor.
-        height: 90vh;
+        height: 160vh;
     }
 
     &--container{
@@ -27,11 +27,16 @@
         url("../img/black-and-white-tables-chairs-people.jpg");
         border-radius: 1.5rem;
 
+        
+        @include respond(tab-port){
+            margin: 0;
+        }
+        
         @include respond(phone){
             justify-content: center;
             margin: 1rem;
-
         }
+
         .dev__tools--title{
             // Definición y alineación contendor
             display: flex;
@@ -40,7 +45,7 @@
             // Medidas del contenedor.
             width: 70%;
             height: 4.5rem;
-            margin: 0.5rem 3rem 3rem 3rem;
+            margin: 3rem 3rem 3rem 3rem;
             // Colores.
             color:whitesmoke;
             //Efectos.
@@ -53,14 +58,16 @@
             border-radius: 10px;
             border: 1px solid rgba( 255, 255, 255, 0.18 );
 
+            
+            
             @include respond(tab-port){
-            // Definición y alineación contendor
+                // Definición y alineación contendor
                 align-self: center;
-            // Medidas del contenedor.
-                width: 50%;
-                height: 3rem;
+                // Medidas del contenedor.
+                width: 80%;
+                height: 4rem;
             }
-
+  
             @include respond(phone){
                 // Definición y alineación contendor
                 justify-content: space-around;    
@@ -68,7 +75,7 @@
                 width: 80%;
                 height: 4rem;
                 margin-bottom: 1rem;
-                }
+            }
             
             h2{
                 // Definición y alineación contendor.
@@ -87,7 +94,7 @@
             // Medidas del contenedor.
             margin: 1.5rem;
             height: 70%;
-            width: 70%;
+            width: 90%;
             
             @include respond(phone){
                 // Definición y alineación contendor.
@@ -107,9 +114,16 @@
                     h3{
                         @include cardTitleH3;
                         top:55%;
-                        left:20%;
+                        left:30%;
+
+                        @include respond(tab-port){
+                            top:30%;
+                            left: 10%;
+                        }
+
                         @include respond(phone){
-                            left:44%;
+                            top:30%;
+                            left:46%;
                         }
                     }
                 }
@@ -138,6 +152,15 @@
                         width: 55%;
                         top:55%;
                         left:45%;
+
+                        @include respond(tab-port){
+                            top:35%;
+                        }
+
+                        @include respond(phone){
+                            top:35%;
+                            left:43%;
+                        }
                     }
                 }
 
@@ -168,6 +191,15 @@
                         width: 60%;
                         top:55%;
                         left:40%;
+                        
+                        @include respond(tab-port){
+                            top:35%;
+                        }
+
+                        @include respond(phone){
+                            top:30%;
+                            left: 37%;
+                        }
                     }
                 }
 

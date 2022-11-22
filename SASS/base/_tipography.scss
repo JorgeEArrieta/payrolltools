@@ -1,7 +1,31 @@
+.header__menu--title{
+    h1{
+
+        @include respond(tab-land){
+            font-size: 2.5rem;
+            //text-transform: uppercase;
+            letter-spacing: 0.2rem;
+        }
+
+        @include respond(tab-port){
+            font-size: 3rem;
+            //text-transform: uppercase;
+            letter-spacing: 0.2rem;
+        }
+    }
+}
+
 .header__menu--menu li{
     display: inline;
     list-style: none;
     margin: 1rem;
+    @include respond(tab-land){
+        font-size: 1.5rem;
+    }
+
+    @include respond(tab-port){
+        font-size: 1.5rem;
+    }
 }
 
 // Titulo y slogan del div titúlo.
@@ -18,7 +42,6 @@
 
         @include respond(phone){
             width: 80%;
-            
         }
         
         h1{
@@ -28,6 +51,14 @@
             text-transform: uppercase;
             letter-spacing: 0.5rem;
             animation: moveRight 5s;
+
+            @include respond(tab-port){
+                font-size: 5rem;
+            }
+
+            @include respond(phone){
+                font-size: 5rem;
+            }
         }
     }
     &--slogan{
@@ -45,6 +76,14 @@
             text-transform: uppercase;
             letter-spacing: 0.5rem;
             animation: moveLeft 5s;
+
+            @include respond(tab-port){
+                font-size: 2rem;
+            }
+
+            @include respond(phone){
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -61,16 +100,26 @@
             
             h2{
                 font-size: 2rem;
-                @include respond(phone){
-                    font-size: 1.8rem;
+                
+                @include respond(tab-port){
+                    font-size: 3rem;
                 }
+
+                @include respond(phone){
+                    font-size: 3rem;
+                }                                
             }
         }
 
         .container--paragraph{
             p{
+                
+                @include respond(tab-port){
+                    font-size: 2rem;
+                }
+
                 @include respond(phone){
-                    font-size: 1.3rem;
+                    font-size: 2rem;
                 }
             }
         }
@@ -80,6 +129,9 @@
 
 // Tipografia del contendor dev-tools.
 .dev__tools{
+    
+    font-family: 'Roboto', sans-serif;
+    
     &--container{
         .dev__tools--title{
             text-transform: uppercase;
@@ -88,9 +140,14 @@
             letter-spacing: 0.3rem;
             
             h2{
-                @include respond(phone){
-                    font-size: 1.8rem;
+                @include respond(tab-port){
+                    font-size: 3rem;
                 }
+
+                @include respond(phone){
+                    font-size: 3rem;
+                }
+
             }
         }
     }
@@ -98,27 +155,39 @@
 
 // Nuestros servicios.
 .our__services{
-    &--conteiner{
+    
+    font-family: 'Roboto', sans-serif;
+    
+    &--conteiner{    
         .conteiner--title{
             h2{
                 text-transform: uppercase;
                 text-align: center;
                 letter-spacing: 0.2rem;
+
+                
+                @include respond(tab-port){
+                    font-size: 3rem;
+                }
+
                 @include respond(phone){
-                    font-size: 2rem;
+                    font-size: 3rem;
                 }
             }
-
         }
 
         .conteiner--paragraph{
-            p{
-                font-family: 'Roboto', sans-serif;
+            p{   
                 text-align: justify;
                 font-size: 1rem;
                 
+                
+                @include respond(tab-port){
+                    font-size: 2rem;
+                }
+
                 @include respond(phone){
-                    font-size: 1.5rem;
+                    font-size: 2.5rem;
                 }               
             }
         }
@@ -127,19 +196,31 @@
 
 // Sección redes sociales.
 .contact__us{
+
+    font-family: 'Roboto', sans-serif;
+    
     .container--title{
         text-align: center;
         text-transform: uppercase;
         font-size: 2rem;
         letter-spacing: 0.5rem;
+
+        @include respond(tab-port){
+            font-size: 3rem;
+        }
     }
 }
 
 // Footer
 .page__footer{
+    font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
     
+    @include respond(tab-port){
+        font-size: 1.5rem;
+    }
+
     @include respond(phone){
-        font-size:1rem;
+        font-size:1.5rem;
     }
 }

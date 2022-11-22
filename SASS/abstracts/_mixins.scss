@@ -40,19 +40,26 @@
     justify-content: space-between;
     align-items: center;
     // Medidas del contenedor.
-    height: 4rem;
     padding: .5rem;
     margin-top:.5rem;
     // Colores.
     color:whitesmoke;
     // Efectos.
-    background-image: linear-gradient(90deg, #50577ad6, #6b728ed5);
+    background-image: linear-gradient(90deg, #181d38d6, #6b728ed5);
     // Fuente.
     text-align: right;
-
-    @include respond(phone){
-        font-size: 1.6rem;
+    
+    span{
+        @include respond(tab-port){
+            font-size: 2rem;
+            font-weight: 400;
+        }
+    
+        @include respond(phone){
+            font-size: 2.5rem;
+        }
     }
+    
 }
 
 @mixin cardDescrip{
@@ -65,8 +72,13 @@
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     font-size: .9rem;
+
+    @include respond(tab-port){
+        font-size: 1.5rem;
+    }
+
     @include respond(phone){
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 }
 
@@ -77,6 +89,10 @@
     align-items: center;
     height: 3rem;
     margin-bottom: 0.7rem;
+    
+    @include respond(tab-port){
+        height: 4.5rem;
+    }
 
     .button--content{
         display: inherit;
@@ -95,6 +111,10 @@
             text-decoration: none;
             text-align: center;
             color:black;
+
+            @include respond(tab-port){
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -114,6 +134,11 @@
 @mixin imageSize{
     height: 5rem;
     width: 5rem;
+
+    @include respond(tab-port){
+        height: 8rem;
+        width: 8rem;
+    }
 }
 
 // Media-queries.

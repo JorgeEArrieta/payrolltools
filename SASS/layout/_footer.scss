@@ -14,6 +14,11 @@
         height: 15vh;
     }
 
+    @include respond(tab-port){
+        // Medidas del contenedor.
+            height: 20vh;
+        }
+
 
     &--left{
         // Medidas del contenedor.
