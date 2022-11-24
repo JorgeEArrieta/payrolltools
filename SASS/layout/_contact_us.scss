@@ -1,7 +1,7 @@
 .contact__us{
     // Definición y alineación contendor.
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     // Medidas del contenedor.
     height: 60vh;
@@ -24,21 +24,26 @@
         flex-direction: column;
         justify-content: center;
         // Medidas del contenedor.
-        width: 50%;
-        height: 80%;
+        height: 50%;
+        width: 60%;
         margin-bottom: 2rem;
         // Colores.
         color:whitesmoke;
         // Efectos.
         border-radius: 0.5rem;
-        background-image: linear-gradient(45deg, $bk_contactUs_light_1, $bk_contactUs_light_2),
-        url("../img/rami-al-zayat-w33-zg-dNL4-unsplash.jpg");
+        background-image: linear-gradient(45deg, $bk_contactUs_light_1, $bk_contactUs_light_2);
+        //url("../img/rami-al-zayat-w33-zg-dNL4-unsplash.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); 
         
+        @include respond(tab-land){
+            height: 60%;
+            width: 80%;
+        }
+
         @include respond(tab-port){
-            height: 70%;
+            height: 60%;
             width: 80%;
         }
 
@@ -59,10 +64,9 @@
         // Definición y alineación contendor.
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        justify-content: space-around;
         justify-items:center;
         // Medidas del contenedor.
-        margin: 1.5rem;
+        margin: 2rem;
 
         .facebook img{
             @include imageSize;

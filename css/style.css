@@ -34,12 +34,7 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62,5%;
-  /*
-    @include respond(big-desktop){
-        font-size: 75%;
-    }    
-    */ }
+  font-size: 62,5%; }
   @media (max-width: 75em) {
     html {
       font-size: 70%; } }
@@ -49,6 +44,9 @@ html {
   @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   position: relative;
@@ -132,12 +130,18 @@ body {
     letter-spacing: 0.3rem; }
     .about__us--container .container--title h2 {
       font-size: 2rem; }
+      @media (max-width: 75em) {
+        .about__us--container .container--title h2 {
+          font-size: 3rem; } }
       @media (max-width: 56.25em) {
         .about__us--container .container--title h2 {
           font-size: 3rem; } }
       @media (max-width: 37.5em) {
         .about__us--container .container--title h2 {
           font-size: 3rem; } }
+  @media (max-width: 75em) {
+    .about__us--container .container--paragraph p {
+      font-size: 1.5rem; } }
   @media (max-width: 56.25em) {
     .about__us--container .container--paragraph p {
       font-size: 2rem; } }
@@ -165,6 +169,9 @@ body {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.2rem; }
+    @media (max-width: 75em) {
+      .our__services--conteiner .conteiner--title h2 {
+        font-size: 3rem; } }
     @media (max-width: 56.25em) {
       .our__services--conteiner .conteiner--title h2 {
         font-size: 3rem; } }
@@ -174,6 +181,9 @@ body {
   .our__services--conteiner .conteiner--paragraph p {
     text-align: justify;
     font-size: 1rem; }
+    @media (max-width: 75em) {
+      .our__services--conteiner .conteiner--paragraph p {
+        font-size: 1.5rem; } }
     @media (max-width: 56.25em) {
       .our__services--conteiner .conteiner--paragraph p {
         font-size: 2rem; } }
@@ -195,6 +205,9 @@ body {
 .page__footer {
   font-family: 'Roboto', sans-serif;
   font-size: 0.8rem; }
+  @media (max-width: 75em) {
+    .page__footer {
+      font-size: 1rem; } }
   @media (max-width: 56.25em) {
     .page__footer {
       font-size: 1.5rem; } }
@@ -256,9 +269,9 @@ header {
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: space-around;
+    justify-content: center;
+    height: 50%;
     width: 60%;
-    height: 40%;
     margin: 1.5rem;
     padding: 0.5rem;
     color: black;
@@ -268,10 +281,13 @@ header {
     -webkit-backdrop-filter: blur(2.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18); }
+    @media (max-width: 75em) {
+      .about__us--container {
+        height: 60%;
+        width: 80%; } }
     @media (max-width: 56.25em) {
       .about__us--container {
-        justify-content: center;
-        height: 50%;
+        height: 60%;
         width: 80%; } }
     @media (max-width: 37.5em) {
       .about__us--container {
@@ -386,13 +402,18 @@ header {
             text-align: right;
             top: 55%;
             left: 30%; }
+            @media (max-width: 75em) {
+              .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
+                font-size: 1.2rem;
+                font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
                 font-size: 2rem;
                 font-weight: 400; } }
             @media (max-width: 37.5em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
-                font-size: 2.5rem; } }
+                font-size: 2.5rem;
+                font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 {
                 top: 30%;
@@ -408,6 +429,9 @@ header {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
             font-size: .9rem; }
+            @media (max-width: 75em) {
+              .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip p {
+                font-size: 1.2rem; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip p {
                 font-size: 1.5rem; } }
@@ -481,13 +505,18 @@ header {
             width: 55%;
             top: 55%;
             left: 45%; }
+            @media (max-width: 75em) {
+              .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
+                font-size: 1.2rem;
+                font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
                 font-size: 2rem;
                 font-weight: 400; } }
             @media (max-width: 37.5em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
-                font-size: 2.5rem; } }
+                font-size: 2.5rem;
+                font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 {
                 top: 35%; } }
@@ -502,6 +531,9 @@ header {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
             font-size: .9rem; }
+            @media (max-width: 75em) {
+              .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip p {
+                font-size: 1.2rem; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip p {
                 font-size: 1.5rem; } }
@@ -577,13 +609,18 @@ header {
             width: 60%;
             top: 55%;
             left: 40%; }
+            @media (max-width: 75em) {
+              .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
+                font-size: 1.2rem;
+                font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
                 font-size: 2rem;
                 font-weight: 400; } }
             @media (max-width: 37.5em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
-                font-size: 2.5rem; } }
+                font-size: 2.5rem;
+                font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 {
                 top: 35%; } }
@@ -598,6 +635,9 @@ header {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
             font-size: .9rem; }
+            @media (max-width: 75em) {
+              .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip p {
+                font-size: 1.2rem; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip p {
                 font-size: 1.5rem; } }
@@ -661,8 +701,9 @@ header {
     display: flex;
     align-self: center;
     flex-direction: column;
+    justify-content: center;
     height: 50%;
-    width: 50%;
+    width: 60%;
     margin: 3rem auto;
     color: black;
     background: rgba(255, 255, 255, 0.6);
@@ -671,14 +712,16 @@ header {
     -webkit-backdrop-filter: blur(12px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18); }
+    @media (max-width: 75em) {
+      .our__services--conteiner {
+        height: 60%;
+        width: 80%; } }
     @media (max-width: 56.25em) {
       .our__services--conteiner {
-        justify-content: center;
-        height: 70%;
+        height: 60%;
         width: 80%; } }
     @media (max-width: 37.5em) {
       .our__services--conteiner {
-        justify-content: center;
         width: 90%;
         height: 70%; } }
     .our__services--conteiner .conteiner--title {
@@ -690,7 +733,7 @@ header {
 
 .contact__us {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 60vh;
   background-color: whitesmoke; }
@@ -704,18 +747,22 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    height: 80%;
+    height: 50%;
+    width: 60%;
     margin-bottom: 2rem;
     color: whitesmoke;
     border-radius: 0.5rem;
-    background-image: linear-gradient(45deg, #393e46d5, #6d9886d4), url("../img/rami-al-zayat-w33-zg-dNL4-unsplash.jpg");
+    background-image: linear-gradient(45deg, #393e46d5, #6d9886d4);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); }
+    @media (max-width: 75em) {
+      .contact__us .contact__us--container {
+        height: 60%;
+        width: 80%; } }
     @media (max-width: 56.25em) {
       .contact__us .contact__us--container {
-        height: 70%;
+        height: 60%;
         width: 80%; } }
     @media (max-width: 37.5em) {
       .contact__us .contact__us--container {
@@ -728,33 +775,48 @@ header {
   .contact__us .container--social-media {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    justify-content: space-around;
     justify-items: center;
-    margin: 1.5rem; }
+    margin: 2rem; }
     .contact__us .container--social-media .facebook img {
-      height: 5rem;
-      width: 5rem; }
+      height: 4rem;
+      width: 4rem; }
+      @media (max-width: 75em) {
+        .contact__us .container--social-media .facebook img {
+          height: 6rem;
+          width: 6rem; } }
       @media (max-width: 56.25em) {
         .contact__us .container--social-media .facebook img {
           height: 8rem;
           width: 8rem; } }
     .contact__us .container--social-media .instagram img {
-      height: 5rem;
-      width: 5rem; }
+      height: 4rem;
+      width: 4rem; }
+      @media (max-width: 75em) {
+        .contact__us .container--social-media .instagram img {
+          height: 6rem;
+          width: 6rem; } }
       @media (max-width: 56.25em) {
         .contact__us .container--social-media .instagram img {
           height: 8rem;
           width: 8rem; } }
     .contact__us .container--social-media .you_tube img {
-      height: 5rem;
-      width: 5rem; }
+      height: 4rem;
+      width: 4rem; }
+      @media (max-width: 75em) {
+        .contact__us .container--social-media .you_tube img {
+          height: 6rem;
+          width: 6rem; } }
       @media (max-width: 56.25em) {
         .contact__us .container--social-media .you_tube img {
           height: 8rem;
           width: 8rem; } }
     .contact__us .container--social-media .gmail img {
-      height: 5rem;
-      width: 5rem; }
+      height: 4rem;
+      width: 4rem; }
+      @media (max-width: 75em) {
+        .contact__us .container--social-media .gmail img {
+          height: 6rem;
+          width: 6rem; } }
       @media (max-width: 56.25em) {
         .contact__us .container--social-media .gmail img {
           height: 8rem;
