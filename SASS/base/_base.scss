@@ -24,12 +24,16 @@ html{
     @include respond(phone){
         font-size: 50%;
     }
-
-  
+   
+    @include respond(small-phone){
+        font-size: 45%;
+    }
+    
+    /*
     @include respond(big-desktop){
         font-size: 75%;
     }    
-    
+    */
     
 }
 

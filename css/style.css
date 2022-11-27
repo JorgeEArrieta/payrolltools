@@ -34,43 +34,41 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62,5%; }
+  font-size: 62,5%;
+  /*
+    @include respond(big-desktop){
+        font-size: 75%;
+    }    
+    */ }
   @media (max-width: 75em) {
     html {
       font-size: 70%; } }
   @media (max-width: 56.25em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media (max-width: 26.25em) {
     html {
-      font-size: 75%; } }
+      font-size: 45%; } }
 
 body {
   position: relative;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
 
-@media (max-width: 75em) {
-  .header__menu--title h1 {
-    font-size: 2.5rem;
-    letter-spacing: 0.2rem; } }
-
-@media (max-width: 56.25em) {
-  .header__menu--title h1 {
-    font-size: 3rem;
-    letter-spacing: 0.2rem; } }
+.header__menu--title h1 {
+  font-size: 3rem; }
+  @media (max-width: 26.25em) {
+    .header__menu--title h1 {
+      font-size: 3rem; } }
 
 .header__menu--menu li {
   display: inline;
   list-style: none;
   margin: 1rem; }
   @media (max-width: 75em) {
-    .header__menu--menu li {
-      font-size: 1.5rem; } }
-  @media (max-width: 56.25em) {
     .header__menu--menu li {
       font-size: 1.5rem; } }
 
@@ -84,7 +82,7 @@ body {
     background-color: #AAC4FF;
     opacity: 60%;
     animation: moveRight 5s; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .title__page--title {
         width: 80%; } }
     .title__page--title h1 {
@@ -97,9 +95,9 @@ body {
       @media (max-width: 56.25em) {
         .title__page--title h1 {
           font-size: 5rem; } }
-      @media (max-width: 37.5em) {
+      @media (max-width: 38.75em) {
         .title__page--title h1 {
-          font-size: 5rem; } }
+          font-size: 4rem; } }
   .title__page--slogan {
     display: flex;
     justify-content: center;
@@ -118,7 +116,7 @@ body {
       @media (max-width: 56.25em) {
         .title__page--slogan h2 {
           font-size: 2rem; } }
-      @media (max-width: 37.5em) {
+      @media (max-width: 38.75em) {
         .title__page--slogan h2 {
           font-size: 2rem; } }
 
@@ -136,7 +134,7 @@ body {
       @media (max-width: 56.25em) {
         .about__us--container .container--title h2 {
           font-size: 3rem; } }
-      @media (max-width: 37.5em) {
+      @media (max-width: 38.75em) {
         .about__us--container .container--title h2 {
           font-size: 3rem; } }
   @media (max-width: 75em) {
@@ -145,7 +143,7 @@ body {
   @media (max-width: 56.25em) {
     .about__us--container .container--paragraph p {
       font-size: 2rem; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .about__us--container .container--paragraph p {
       font-size: 2rem; } }
 
@@ -159,7 +157,7 @@ body {
     @media (max-width: 56.25em) {
       .dev__tools--container .dev__tools--title h2 {
         font-size: 3rem; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .dev__tools--container .dev__tools--title h2 {
         font-size: 3rem; } }
 
@@ -175,7 +173,7 @@ body {
     @media (max-width: 56.25em) {
       .our__services--conteiner .conteiner--title h2 {
         font-size: 3rem; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .our__services--conteiner .conteiner--title h2 {
         font-size: 3rem; } }
   .our__services--conteiner .conteiner--paragraph p {
@@ -187,7 +185,7 @@ body {
     @media (max-width: 56.25em) {
       .our__services--conteiner .conteiner--paragraph p {
         font-size: 2rem; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .our__services--conteiner .conteiner--paragraph p {
         font-size: 2.5rem; } }
 
@@ -211,7 +209,7 @@ body {
   @media (max-width: 56.25em) {
     .page__footer {
       font-size: 1.5rem; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .page__footer {
       font-size: 1.5rem; } }
 
@@ -235,20 +233,85 @@ header {
   z-index: 1; }
 
 .header__menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 10vh;
   background-color: #06283D;
   color: whitesmoke; }
+  .header__menu .header__menu--navigation {
+    visibility: hidden; }
+    @media (max-width: 38.75em) {
+      .header__menu .header__menu--navigation {
+        visibility: visible; }
+        .header__menu .header__menu--navigation .navigation__background {
+          position: absolute;
+          top: 1.5rem;
+          right: 3.5rem;
+          z-index: 1000;
+          height: 6rem;
+          width: 6rem;
+          background-image: radial-gradient(#50577A, #6B728E);
+          border-radius: 50%;
+          transition: transform .8s; }
+        .header__menu .header__menu--navigation .navigation__button {
+          position: absolute;
+          top: 1.5rem;
+          right: 3.5rem;
+          z-index: 2000;
+          height: 7rem;
+          width: 7rem;
+          background-color: whitesmoke;
+          border-radius: 50%; }
+        .header__menu .header__menu--navigation .navigation__checkbox {
+          visibility: hidden; }
+        .header__menu .header__menu--navigation .navigation__items {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 1500;
+          height: 100vh;
+          width: 0; }
+          .header__menu .header__menu--navigation .navigation__items ul {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            left: 25%;
+            transform: translate(-25%, -50%);
+            font-size: 4.5rem;
+            margin: 1.5rem;
+            list-style: none;
+            text-align: center; }
+            .header__menu .header__menu--navigation .navigation__items ul li {
+              margin: 2rem; }
+              .header__menu .header__menu--navigation .navigation__items ul li a,
+              .header__menu .header__menu--navigation .navigation__items ul li a:link,
+              .header__menu .header__menu--navigation .navigation__items ul li a:visited,
+              .header__menu .header__menu--navigation .navigation__items ul li a:focus {
+                text-decoration: none;
+                color: whitesmoke; }
+        .header__menu .header__menu--navigation .navigation__checkbox:checked ~ .navigation__background {
+          transform: scale(50); }
+        .header__menu .header__menu--navigation .navigation__checkbox:checked ~ .navigation__items {
+          width: 100%; } }
   .header__menu--title {
     display: flex;
     justify-content: center;
     align-self: center;
     margin: 0.5rem; }
+    @media (max-width: 38.75em) {
+      .header__menu--title {
+        width: 35%; } }
+    @media (max-width: 26.25em) {
+      .header__menu--title {
+        width: 50%; } }
   .header__menu--menu {
     display: flex;
     justify-content: center;
     align-self: center; }
+    @media (max-width: 38.75em) {
+      .header__menu--menu {
+        visibility: hidden; } }
     .header__menu--menu a,
     .header__menu--menu a:link,
     .header__menu--menu a:visited,
@@ -262,7 +325,7 @@ header {
   justify-content: center;
   height: 70vh;
   background-color: whitesmoke; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .about__us {
       height: 50vh; } }
   .about__us--container {
@@ -289,7 +352,7 @@ header {
       .about__us--container {
         height: 60%;
         width: 80%; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .about__us--container {
         margin: 0;
         width: 90%; } }
@@ -311,7 +374,7 @@ header {
   align-items: center;
   height: 80vh;
   background-color: whitesmoke; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .dev__tools {
       height: 160vh; } }
   .dev__tools--container {
@@ -326,10 +389,14 @@ header {
     @media (max-width: 56.25em) {
       .dev__tools--container {
         margin: 0; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .dev__tools--container {
         justify-content: center;
         margin: 1rem; } }
+    @media (max-width: 26.25em) {
+      .dev__tools--container {
+        justify-content: space-evenly;
+        margin: 0; } }
     .dev__tools--container .dev__tools--title {
       display: flex;
       justify-content: center;
@@ -351,12 +418,15 @@ header {
           align-self: center;
           width: 80%;
           height: 4rem; } }
-      @media (max-width: 37.5em) {
+      @media (max-width: 38.75em) {
         .dev__tools--container .dev__tools--title {
           justify-content: space-around;
           width: 80%;
           height: 4rem;
           margin-bottom: 1rem; } }
+      @media (max-width: 26.25em) {
+        .dev__tools--container .dev__tools--title {
+          margin: 0; } }
       .dev__tools--container .dev__tools--title h2 {
         justify-self: center;
         align-self: center;
@@ -366,9 +436,9 @@ header {
       align-self: center;
       flex-direction: row;
       margin: 1.5rem;
-      height: 70%;
+      height: 80%;
       width: 90%; }
-      @media (max-width: 37.5em) {
+      @media (max-width: 38.75em) {
         .dev__tools--container .dev__tools--cards {
           flex-direction: column;
           margin: 0.5rem;
@@ -382,6 +452,9 @@ header {
         border-bottom-right-radius: 1rem;
         border-top-left-radius: 1rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+        @media (max-width: 38.75em) {
+          .dev__tools--container .dev__tools--cards .card--segundadeduccion {
+            height: 35%; } }
         .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title {
           position: relative;
           height: 10rem;
@@ -389,6 +462,9 @@ header {
           border-top-left-radius: 1rem;
           background-image: linear-gradient(45deg, #50577ada, #474e68d2), url("../img/calculadora.png");
           background-size: cover; }
+          @media (max-width: 38.75em) {
+            .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title {
+              height: 35%; } }
           .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 {
             position: absolute;
             display: flex;
@@ -410,7 +486,7 @@ header {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
                 font-size: 2rem;
                 font-weight: 400; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
                 font-size: 2.5rem;
                 font-weight: 400; } }
@@ -418,13 +494,16 @@ header {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 {
                 top: 30%;
                 left: 10%; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 {
                 top: 30%;
                 left: 46%; } }
         .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip {
           margin: 0 .5rem;
           padding: 1rem; }
+          @media (max-width: 26.25em) {
+            .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip {
+              height: 40%; } }
           .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip p {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
@@ -435,7 +514,7 @@ header {
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip p {
                 font-size: 1.5rem; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip p {
                 font-size: 2rem; } }
         .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom {
@@ -484,6 +563,9 @@ header {
         border-bottom-right-radius: 1rem;
         border-top-left-radius: 1rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+        @media (max-width: 38.75em) {
+          .dev__tools--container .dev__tools--cards .card--formulario1357 {
+            height: 35%; } }
         .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title {
           position: relative;
           height: 10rem;
@@ -491,6 +573,9 @@ header {
           border-top-left-radius: 1rem;
           background-image: linear-gradient(45deg, #50577ada, #474e68d2), url("../img/excel.png");
           background-size: cover; }
+          @media (max-width: 38.75em) {
+            .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title {
+              height: 35%; } }
           .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 {
             position: absolute;
             display: flex;
@@ -513,20 +598,23 @@ header {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
                 font-size: 2rem;
                 font-weight: 400; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
                 font-size: 2.5rem;
                 font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 {
                 top: 35%; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 {
                 top: 35%;
                 left: 43%; } }
         .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip {
           margin: 0 .5rem;
           padding: 1rem; }
+          @media (max-width: 26.25em) {
+            .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip {
+              height: 40%; } }
           .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip p {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
@@ -537,7 +625,7 @@ header {
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip p {
                 font-size: 1.5rem; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip p {
                 font-size: 2rem; } }
         .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom {
@@ -586,6 +674,9 @@ header {
         border-bottom-right-radius: 1rem;
         border-top-left-radius: 1rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+        @media (max-width: 38.75em) {
+          .dev__tools--container .dev__tools--cards .card--extractorsiradig {
+            height: 35%; } }
         .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title {
           position: relative;
           height: 10rem;
@@ -593,6 +684,9 @@ header {
           border-top-left-radius: 1rem;
           background-image: linear-gradient(45deg, #50577ada, #474e68d2), url("../img/xml.jpg");
           background-size: cover; }
+          @media (max-width: 38.75em) {
+            .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title {
+              height: 35%; } }
           .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 {
             position: absolute;
             display: flex;
@@ -617,20 +711,23 @@ header {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
                 font-size: 2rem;
                 font-weight: 400; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
                 font-size: 2.5rem;
                 font-weight: 400; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 {
                 top: 35%; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 {
                 top: 30%;
                 left: 37%; } }
         .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip {
           margin: 0 .5rem;
           padding: 1rem; }
+          @media (max-width: 26.25em) {
+            .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip {
+              height: 40%; } }
           .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip p {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
@@ -641,7 +738,7 @@ header {
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip p {
                 font-size: 1.5rem; } }
-            @media (max-width: 37.5em) {
+            @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip p {
                 font-size: 2rem; } }
         .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom {
@@ -690,7 +787,7 @@ header {
   height: 70vh;
   background-color: whitesmoke;
   color: white; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .our__services {
       height: 40vh; } }
   @media (max-width: 56.25em) {
@@ -720,7 +817,7 @@ header {
       .our__services--conteiner {
         height: 60%;
         width: 80%; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .our__services--conteiner {
         width: 90%;
         height: 70%; } }
@@ -740,7 +837,7 @@ header {
   @media (max-width: 56.25em) {
     .contact__us {
       margin: 0; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .contact__us {
       height: 50vh; } }
   .contact__us .contact__us--container {
@@ -764,7 +861,7 @@ header {
       .contact__us .contact__us--container {
         height: 60%;
         width: 80%; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 38.75em) {
       .contact__us .contact__us--container {
         width: 90%; } }
   .contact__us .container--title {
@@ -829,7 +926,7 @@ header {
   height: 30vh;
   background-color: black;
   color: antiquewhite; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .page__footer {
       height: 15vh; } }
   @media (max-width: 56.25em) {
@@ -877,6 +974,6 @@ header {
   display: flex;
   justify-content: center;
   height: 99vh; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 38.75em) {
     .title__page {
       height: 70vh; } }

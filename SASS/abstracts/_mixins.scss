@@ -16,6 +16,10 @@
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @include respond(phone){
+        height: 35%;
+    }
 }
 
 @mixin cardTitle($image) {
@@ -29,6 +33,10 @@
     background-image: linear-gradient(45deg, #50577ada, #474e68d2),
     url($image);
     background-size: cover;
+
+    @include respond(phone){
+        height: 35%;
+    }
     
 }
 
@@ -72,6 +80,10 @@
 @mixin cardDescrip{
     margin: 0 .5rem;
     padding: 1rem;
+
+    @include respond(small-phone){
+        height: 40%;
+    }
 }
 
 @mixin cardDescripP {
@@ -166,8 +178,12 @@
 
 @mixin respond($breakpoint) {
 
+    @if $breakpoint == small-phone{
+        @media (max-width: 26.25em) { @content };
+    }
+
     @if $breakpoint == phone{
-        @media (max-width: 37.5em) { @content };
+        @media (max-width: 38.75em) { @content };
     }
     
     @if $breakpoint == tab-port{

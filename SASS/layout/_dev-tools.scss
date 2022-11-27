@@ -37,6 +37,11 @@
             margin: 1rem;
         }
 
+        @include respond(small-phone){
+            justify-content: space-evenly;
+            margin:0;
+        }
+
         .dev__tools--title{
             // Definición y alineación contendor
             display: flex;
@@ -57,8 +62,6 @@
             -webkit-backdrop-filter: blur( 12px );
             border-radius: 10px;
             border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-            
             
             @include respond(tab-port){
                 // Definición y alineación contendor
@@ -75,6 +78,10 @@
                 width: 80%;
                 height: 4rem;
                 margin-bottom: 1rem;
+            }
+
+            @include respond(small-phone){
+                margin:0;
             }
             
             h2{
@@ -93,7 +100,7 @@
             flex-direction: row;
             // Medidas del contenedor.
             margin: 1.5rem;
-            height: 70%;
+            height: 80%;
             width: 90%;
             
             @include respond(phone){
