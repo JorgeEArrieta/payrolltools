@@ -8,13 +8,8 @@
     background-color: whitesmoke;
     color:white;
 
-    @include respond(phone){
+    @include respond(tab-land){
         height: 40vh;
-    }
-
-    @include respond(tab-port){
-        height: 55vh;
-        margin: 0;
     }
 
     &--conteiner{

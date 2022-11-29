@@ -7,7 +7,7 @@
     // Colores.
     background-color: whitesmoke;
 
-    @include respond(phone){
+    @include respond(tab-land){
         // Medidas del contenedor.
         height: 50vh;
     }

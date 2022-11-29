@@ -43,6 +43,14 @@
                     // Medidas del contenedor.
                     margin-right: 0.8rem;
                     padding: 0.3rem;
+
+                    a,
+                    a:visited,
+                    a:link,
+                    a:focus{
+                        text-decoration: none;
+                        color:whitesmoke;
+                    }
                 }
             }
         }
@@ -74,6 +82,14 @@
                     // Medidas del contenedor.
                     margin-right: 0.8rem;
                     padding: 0.3rem;
+
+                    a,
+                    a:visited,
+                    a:link, 
+                    a:focus{
+                        text-decoration: none;
+                        color:whitesmoke;
+                    }
                 }
             }            
         }

@@ -34,12 +34,10 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62,5%;
-  /*
-    @include respond(big-desktop){
-        font-size: 75%;
-    }    
-    */ }
+  font-size: 62,5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
   @media (max-width: 75em) {
     html {
       font-size: 70%; } }
@@ -49,9 +47,12 @@ html {
   @media (max-width: 38.75em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 26.25em) {
+  @media (max-width: 28.75em) {
     html {
       font-size: 45%; } }
+  @media (max-width: 22.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   position: relative;
@@ -60,7 +61,7 @@ body {
 
 .header__menu--title h1 {
   font-size: 3rem; }
-  @media (max-width: 26.25em) {
+  @media (max-width: 28.75em) {
     .header__menu--title h1 {
       font-size: 3rem; } }
 
@@ -92,12 +93,9 @@ body {
       text-transform: uppercase;
       letter-spacing: 0.5rem;
       animation: moveRight 5s; }
-      @media (max-width: 56.25em) {
+      @media (max-width: 75em) {
         .title__page--title h1 {
           font-size: 5rem; } }
-      @media (max-width: 38.75em) {
-        .title__page--title h1 {
-          font-size: 4rem; } }
   .title__page--slogan {
     display: flex;
     justify-content: center;
@@ -113,10 +111,7 @@ body {
       text-transform: uppercase;
       letter-spacing: 0.5rem;
       animation: moveLeft 5s; }
-      @media (max-width: 56.25em) {
-        .title__page--slogan h2 {
-          font-size: 2rem; } }
-      @media (max-width: 38.75em) {
+      @media (max-width: 75em) {
         .title__page--slogan h2 {
           font-size: 2rem; } }
 
@@ -131,21 +126,12 @@ body {
       @media (max-width: 75em) {
         .about__us--container .container--title h2 {
           font-size: 3rem; } }
-      @media (max-width: 56.25em) {
-        .about__us--container .container--title h2 {
-          font-size: 3rem; } }
-      @media (max-width: 38.75em) {
-        .about__us--container .container--title h2 {
-          font-size: 3rem; } }
   @media (max-width: 75em) {
     .about__us--container .container--paragraph p {
       font-size: 1.5rem; } }
-  @media (max-width: 56.25em) {
-    .about__us--container .container--paragraph p {
-      font-size: 2rem; } }
   @media (max-width: 38.75em) {
     .about__us--container .container--paragraph p {
-      font-size: 2rem; } }
+      font-size: 1.8rem; } }
 
 .dev__tools {
   font-family: 'Roboto', sans-serif; }
@@ -154,10 +140,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     letter-spacing: 0.3rem; }
-    @media (max-width: 56.25em) {
-      .dev__tools--container .dev__tools--title h2 {
-        font-size: 3rem; } }
-    @media (max-width: 38.75em) {
+    @media (max-width: 75em) {
       .dev__tools--container .dev__tools--title h2 {
         font-size: 3rem; } }
 
@@ -166,14 +149,9 @@ body {
   .our__services--conteiner .conteiner--title h2 {
     text-transform: uppercase;
     text-align: center;
+    font-size: 2rem;
     letter-spacing: 0.2rem; }
     @media (max-width: 75em) {
-      .our__services--conteiner .conteiner--title h2 {
-        font-size: 3rem; } }
-    @media (max-width: 56.25em) {
-      .our__services--conteiner .conteiner--title h2 {
-        font-size: 3rem; } }
-    @media (max-width: 38.75em) {
       .our__services--conteiner .conteiner--title h2 {
         font-size: 3rem; } }
   .our__services--conteiner .conteiner--paragraph p {
@@ -182,12 +160,9 @@ body {
     @media (max-width: 75em) {
       .our__services--conteiner .conteiner--paragraph p {
         font-size: 1.5rem; } }
-    @media (max-width: 56.25em) {
-      .our__services--conteiner .conteiner--paragraph p {
-        font-size: 2rem; } }
     @media (max-width: 38.75em) {
       .our__services--conteiner .conteiner--paragraph p {
-        font-size: 2.5rem; } }
+        font-size: 1.8rem; } }
 
 .contact__us {
   font-family: 'Roboto', sans-serif; }
@@ -262,7 +237,19 @@ header {
           height: 7rem;
           width: 7rem;
           background-color: whitesmoke;
-          border-radius: 50%; }
+          border-radius: 50%;
+          text-align: center; }
+          .header__menu .header__menu--navigation .navigation__button .list__menu {
+            position: relative;
+            top: 1.5rem;
+            height: 4rem;
+            width: 4rem; }
+          .header__menu .header__menu--navigation .navigation__button .close__menu {
+            visibility: hidden;
+            position: relative;
+            top: -2.5rem;
+            height: 4rem;
+            width: 4rem; }
         .header__menu .header__menu--navigation .navigation__checkbox {
           visibility: hidden; }
         .header__menu .header__menu--navigation .navigation__items {
@@ -293,7 +280,11 @@ header {
         .header__menu .header__menu--navigation .navigation__checkbox:checked ~ .navigation__background {
           transform: scale(50); }
         .header__menu .header__menu--navigation .navigation__checkbox:checked ~ .navigation__items {
-          width: 100%; } }
+          width: 100%; }
+        .header__menu .header__menu--navigation .navigation__checkbox:checked ~ .navigation__button .list__menu {
+          visibility: hidden; }
+        .header__menu .header__menu--navigation .navigation__checkbox:checked ~ .navigation__button .close__menu {
+          visibility: visible; } }
   .header__menu--title {
     display: flex;
     justify-content: center;
@@ -302,7 +293,7 @@ header {
     @media (max-width: 38.75em) {
       .header__menu--title {
         width: 35%; } }
-    @media (max-width: 26.25em) {
+    @media (max-width: 28.75em) {
       .header__menu--title {
         width: 50%; } }
   .header__menu--menu {
@@ -312,20 +303,27 @@ header {
     @media (max-width: 38.75em) {
       .header__menu--menu {
         visibility: hidden; } }
+    .header__menu--menu a {
+      padding: 0.5rem; }
     .header__menu--menu a,
     .header__menu--menu a:link,
-    .header__menu--menu a:visited,
-    .header__menu--menu a:focus {
+    .header__menu--menu a:visited {
       text-decoration: none;
       text-align: center;
-      color: whitesmoke; }
+      color: whitesmoke;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #AAC4FF 50%);
+      background-size: 230%;
+      transition: all .5s; }
+    .header__menu--menu a:hover,
+    .header__menu--menu a:focus {
+      background-position: 100%; }
 
 .about__us {
   display: flex;
   justify-content: center;
   height: 70vh;
   background-color: whitesmoke; }
-  @media (max-width: 38.75em) {
+  @media (max-width: 75em) {
     .about__us {
       height: 50vh; } }
   .about__us--container {
@@ -372,8 +370,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   background-color: whitesmoke; }
+  @media (max-width: 75em) {
+    .dev__tools {
+      height: 70vh; } }
+  @media (max-width: 56.25em) {
+    .dev__tools {
+      height: 70vh; } }
   @media (max-width: 38.75em) {
     .dev__tools {
       height: 160vh; } }
@@ -393,7 +397,7 @@ header {
       .dev__tools--container {
         justify-content: center;
         margin: 1rem; } }
-    @media (max-width: 26.25em) {
+    @media (max-width: 28.75em) {
       .dev__tools--container {
         justify-content: space-evenly;
         margin: 0; } }
@@ -424,7 +428,7 @@ header {
           width: 80%;
           height: 4rem;
           margin-bottom: 1rem; } }
-      @media (max-width: 26.25em) {
+      @media (max-width: 28.75em) {
         .dev__tools--container .dev__tools--title {
           margin: 0; } }
       .dev__tools--container .dev__tools--title h2 {
@@ -435,14 +439,20 @@ header {
       display: flex;
       align-self: center;
       flex-direction: row;
-      margin: 1.5rem;
-      height: 80%;
-      width: 90%; }
+      margin: 0.5rem;
+      height: 90%;
+      width: 70%; }
+      @media (max-width: 75em) {
+        .dev__tools--container .dev__tools--cards {
+          width: 85%; } }
       @media (max-width: 38.75em) {
         .dev__tools--container .dev__tools--cards {
           flex-direction: column;
           margin: 0.5rem;
           height: 80%;
+          width: 80%; } }
+      @media (max-width: 56.25em) {
+        .dev__tools--container .dev__tools--cards {
           width: 80%; } }
       .dev__tools--container .dev__tools--cards .card--segundadeduccion {
         display: flex;
@@ -457,14 +467,11 @@ header {
             height: 35%; } }
         .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title {
           position: relative;
-          height: 10rem;
+          height: 35%;
           margin-bottom: 1rem;
           border-top-left-radius: 1rem;
           background-image: linear-gradient(45deg, #50577ada, #474e68d2), url("../img/calculadora.png");
           background-size: cover; }
-          @media (max-width: 38.75em) {
-            .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title {
-              height: 35%; } }
           .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 {
             position: absolute;
             display: flex;
@@ -476,20 +483,14 @@ header {
             color: whitesmoke;
             background-image: linear-gradient(90deg, #181d38d6, #6b728ed5);
             text-align: right;
-            top: 55%;
+            top: 40%;
             left: 30%; }
             @media (max-width: 75em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
-                font-size: 1.2rem;
-                font-weight: 400; } }
-            @media (max-width: 56.25em) {
-              .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
-                font-size: 2rem;
-                font-weight: 400; } }
+                font-size: 1.8rem; } }
             @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 span {
-                font-size: 2.5rem;
-                font-weight: 400; } }
+                font-size: 2.5rem; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--title h3 {
                 top: 30%;
@@ -500,10 +501,9 @@ header {
                 left: 46%; } }
         .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip {
           margin: 0 .5rem;
-          padding: 1rem; }
-          @media (max-width: 26.25em) {
-            .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip {
-              height: 40%; } }
+          padding: 1rem;
+          height: 50%;
+          margin-top: 1.8rem; }
           .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--descrip p {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
@@ -521,7 +521,7 @@ header {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          height: 3rem;
+          height: 15%;
           margin-bottom: 0.7rem; }
           @media (max-width: 56.25em) {
             .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom {
@@ -542,12 +542,18 @@ header {
               text-decoration: none;
               text-align: center;
               color: black; }
-              @media (max-width: 56.25em) {
+              @media (max-width: 75em) {
                 .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a,
                 .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a:link,
                 .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a:visited,
                 .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a:focus {
                   font-size: 1.5rem; } }
+              @media (max-width: 38.75em) {
+                .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a,
+                .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a:link,
+                .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a:visited,
+                .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content a:focus {
+                  font-size: 2rem; } }
           .dev__tools--container .dev__tools--cards .card--segundadeduccion .card--buttom .button--content:hover {
             background-color: black;
             color: whitesmoke;
@@ -568,14 +574,11 @@ header {
             height: 35%; } }
         .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title {
           position: relative;
-          height: 10rem;
+          height: 35%;
           margin-bottom: 1rem;
           border-top-left-radius: 1rem;
           background-image: linear-gradient(45deg, #50577ada, #474e68d2), url("../img/excel.png");
           background-size: cover; }
-          @media (max-width: 38.75em) {
-            .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title {
-              height: 35%; } }
           .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 {
             position: absolute;
             display: flex;
@@ -592,16 +595,10 @@ header {
             left: 45%; }
             @media (max-width: 75em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
-                font-size: 1.2rem;
-                font-weight: 400; } }
-            @media (max-width: 56.25em) {
-              .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
-                font-size: 2rem;
-                font-weight: 400; } }
+                font-size: 1.8rem; } }
             @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 span {
-                font-size: 2.5rem;
-                font-weight: 400; } }
+                font-size: 2.5rem; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--formulario1357 .card--title h3 {
                 top: 35%; } }
@@ -611,10 +608,9 @@ header {
                 left: 43%; } }
         .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip {
           margin: 0 .5rem;
-          padding: 1rem; }
-          @media (max-width: 26.25em) {
-            .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip {
-              height: 40%; } }
+          padding: 1rem;
+          height: 50%;
+          margin-top: 1.8rem; }
           .dev__tools--container .dev__tools--cards .card--formulario1357 .card--descrip p {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
@@ -632,7 +628,7 @@ header {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          height: 3rem;
+          height: 15%;
           margin-bottom: 0.7rem; }
           @media (max-width: 56.25em) {
             .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom {
@@ -653,12 +649,18 @@ header {
               text-decoration: none;
               text-align: center;
               color: black; }
-              @media (max-width: 56.25em) {
+              @media (max-width: 75em) {
                 .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a,
                 .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a:link,
                 .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a:visited,
                 .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a:focus {
                   font-size: 1.5rem; } }
+              @media (max-width: 38.75em) {
+                .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a,
+                .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a:link,
+                .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a:visited,
+                .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content a:focus {
+                  font-size: 2rem; } }
           .dev__tools--container .dev__tools--cards .card--formulario1357 .card--buttom .button--content:hover {
             background-color: black;
             color: whitesmoke;
@@ -679,14 +681,11 @@ header {
             height: 35%; } }
         .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title {
           position: relative;
-          height: 10rem;
+          height: 35%;
           margin-bottom: 1rem;
           border-top-left-radius: 1rem;
           background-image: linear-gradient(45deg, #50577ada, #474e68d2), url("../img/xml.jpg");
           background-size: cover; }
-          @media (max-width: 38.75em) {
-            .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title {
-              height: 35%; } }
           .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 {
             position: absolute;
             display: flex;
@@ -705,16 +704,10 @@ header {
             left: 40%; }
             @media (max-width: 75em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
-                font-size: 1.2rem;
-                font-weight: 400; } }
-            @media (max-width: 56.25em) {
-              .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
-                font-size: 2rem;
-                font-weight: 400; } }
+                font-size: 1.8rem; } }
             @media (max-width: 38.75em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 span {
-                font-size: 2.5rem;
-                font-weight: 400; } }
+                font-size: 2.5rem; } }
             @media (max-width: 56.25em) {
               .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--title h3 {
                 top: 35%; } }
@@ -724,10 +717,9 @@ header {
                 left: 37%; } }
         .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip {
           margin: 0 .5rem;
-          padding: 1rem; }
-          @media (max-width: 26.25em) {
-            .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip {
-              height: 40%; } }
+          padding: 1rem;
+          height: 50%;
+          margin-top: 1.8rem; }
           .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--descrip p {
             font-family: 'Roboto', sans-serif;
             text-align: justify;
@@ -745,7 +737,7 @@ header {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          height: 3rem;
+          height: 15%;
           margin-bottom: 0.7rem; }
           @media (max-width: 56.25em) {
             .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom {
@@ -766,12 +758,18 @@ header {
               text-decoration: none;
               text-align: center;
               color: black; }
-              @media (max-width: 56.25em) {
+              @media (max-width: 75em) {
                 .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a,
                 .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a:link,
                 .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a:visited,
                 .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a:focus {
                   font-size: 1.5rem; } }
+              @media (max-width: 38.75em) {
+                .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a,
+                .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a:link,
+                .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a:visited,
+                .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content a:focus {
+                  font-size: 2rem; } }
           .dev__tools--container .dev__tools--cards .card--extractorsiradig .card--buttom .button--content:hover {
             background-color: black;
             color: whitesmoke;
@@ -787,13 +785,9 @@ header {
   height: 70vh;
   background-color: whitesmoke;
   color: white; }
-  @media (max-width: 38.75em) {
+  @media (max-width: 75em) {
     .our__services {
       height: 40vh; } }
-  @media (max-width: 56.25em) {
-    .our__services {
-      height: 55vh;
-      margin: 0; } }
   .our__services--conteiner {
     display: flex;
     align-self: center;
@@ -832,12 +826,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
   background-color: whitesmoke; }
-  @media (max-width: 56.25em) {
-    .contact__us {
-      margin: 0; } }
-  @media (max-width: 38.75em) {
+  @media (max-width: 75em) {
     .contact__us {
       height: 50vh; } }
   .contact__us .contact__us--container {
@@ -869,55 +860,27 @@ header {
     flex-direction: column;
     margin: 1.5rem auto;
     padding: .5rem; }
-  .contact__us .container--social-media {
+  .contact__us .container__social-media {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-items: center;
     margin: 2rem; }
-    .contact__us .container--social-media .facebook img {
+    .contact__us .container__social-media .social__media--img img {
       height: 4rem;
-      width: 4rem; }
+      width: 4rem;
+      transition: all 0.5s; }
       @media (max-width: 75em) {
-        .contact__us .container--social-media .facebook img {
+        .contact__us .container__social-media .social__media--img img {
           height: 6rem;
           width: 6rem; } }
       @media (max-width: 56.25em) {
-        .contact__us .container--social-media .facebook img {
+        .contact__us .container__social-media .social__media--img img {
           height: 8rem;
           width: 8rem; } }
-    .contact__us .container--social-media .instagram img {
-      height: 4rem;
-      width: 4rem; }
-      @media (max-width: 75em) {
-        .contact__us .container--social-media .instagram img {
-          height: 6rem;
-          width: 6rem; } }
-      @media (max-width: 56.25em) {
-        .contact__us .container--social-media .instagram img {
-          height: 8rem;
-          width: 8rem; } }
-    .contact__us .container--social-media .you_tube img {
-      height: 4rem;
-      width: 4rem; }
-      @media (max-width: 75em) {
-        .contact__us .container--social-media .you_tube img {
-          height: 6rem;
-          width: 6rem; } }
-      @media (max-width: 56.25em) {
-        .contact__us .container--social-media .you_tube img {
-          height: 8rem;
-          width: 8rem; } }
-    .contact__us .container--social-media .gmail img {
-      height: 4rem;
-      width: 4rem; }
-      @media (max-width: 75em) {
-        .contact__us .container--social-media .gmail img {
-          height: 6rem;
-          width: 6rem; } }
-      @media (max-width: 56.25em) {
-        .contact__us .container--social-media .gmail img {
-          height: 8rem;
-          width: 8rem; } }
+    .contact__us .container__social-media .social__media--img img:hover,
+    .contact__us .container__social-media .social__media--img img:focus {
+      transform: scale(1.5);
+      cursor: pointer; }
 
 .page__footer {
   display: flex;
@@ -949,6 +912,12 @@ header {
           display: inline-block;
           margin-right: 0.8rem;
           padding: 0.3rem; }
+          .page__footer--left .nav ul li a,
+          .page__footer--left .nav ul li a:visited,
+          .page__footer--left .nav ul li a:link,
+          .page__footer--left .nav ul li a:focus {
+            text-decoration: none;
+            color: whitesmoke; }
   .page__footer--right {
     display: flex;
     flex-direction: column;
@@ -968,6 +937,12 @@ header {
           display: inline-block;
           margin-right: 0.8rem;
           padding: 0.3rem; }
+          .page__footer--right .social--media ul li a,
+          .page__footer--right .social--media ul li a:visited,
+          .page__footer--right .social--media ul li a:link,
+          .page__footer--right .social--media ul li a:focus {
+            text-decoration: none;
+            color: whitesmoke; }
 
 .title__page {
   position: relative;

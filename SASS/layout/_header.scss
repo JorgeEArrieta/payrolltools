@@ -55,6 +55,22 @@ header{
                 background-color: whitesmoke;
                 // Efectos.
                 border-radius: 50%;
+                text-align: center;
+
+                .list__menu{
+                    position: relative;
+                    top:1.5rem;
+                    height: 4rem;
+                    width: 4rem;
+                }
+
+                .close__menu{
+                    visibility: hidden;
+                    position: relative;
+                    top:-2.5rem;
+                    height: 4rem;
+                    width: 4rem;
+                }
 
             }
             .navigation__checkbox{
@@ -84,6 +100,7 @@ header{
                     list-style: none;
                     text-align: center;
                     
+                    
                     li{
                         margin: 2rem;
                         a,
@@ -94,10 +111,8 @@ header{
                             color:whitesmoke;
                         }    
                     }
-
                 }
             }
-
             .navigation__checkbox:checked ~ .navigation__background{
                 transform: scale(50);
 
@@ -105,6 +120,15 @@ header{
 
             .navigation__checkbox:checked ~ .navigation__items{
                 width: 100%;
+            }
+
+            .navigation__checkbox:checked ~ .navigation__button{
+                .list__menu{
+                    visibility: hidden;
+                }
+                .close__menu{
+                    visibility: visible;
+                }
             }
         }
     }
@@ -135,14 +159,23 @@ header{
         @include respond(phone){
             visibility: hidden;
         }
-
+        a{
+            padding: 0.5rem;
+        }
         a,
         a:link,
-        a:visited,
-        a:focus{
+        a:visited{
             text-decoration: none;
             text-align: center;
             color:whitesmoke;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $background-font 50%);
+            background-size: 230%;
+            transition: all .5s;
+        }
+
+        a:hover, 
+        a:focus{
+            background-position: 100%;
         }
     }
 }

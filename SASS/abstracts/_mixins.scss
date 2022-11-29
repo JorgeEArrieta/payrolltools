@@ -26,17 +26,13 @@
     // Definición y alineación contendor.
     position: relative;
     // Medidas del contenedor.
-    height: 10rem;
+    height: 35%;
     margin-bottom: 1rem;
     // Efectos.
     border-top-left-radius: 1rem;
     background-image: linear-gradient(45deg, #50577ada, #474e68d2),
     url($image);
     background-size: cover;
-
-    @include respond(phone){
-        height: 35%;
-    }
     
 }
 
@@ -58,20 +54,13 @@
     text-align: right;
     
     span{
-        
         @include respond(tab-land){
-            font-size: 1.2rem;
-            font-weight: 400;
+            font-size: 1.8rem;
+            //font-weight: 400;
         }
 
-        @include respond(tab-port){
-            font-size: 2rem;
-            font-weight: 400;
-        }
-    
         @include respond(phone){
             font-size: 2.5rem;
-            font-weight: 400;
         }
     }
     
@@ -80,10 +69,8 @@
 @mixin cardDescrip{
     margin: 0 .5rem;
     padding: 1rem;
-
-    @include respond(small-phone){
-        height: 40%;
-    }
+    height: 50%;
+    margin-top: 1.8rem;
 }
 
 @mixin cardDescripP {
@@ -110,7 +97,7 @@
     display: flex;
     justify-content:space-around;
     align-items: center;
-    height: 3rem;
+    height: 15%;
     margin-bottom: 0.7rem;
     
     @include respond(tab-port){
@@ -135,8 +122,12 @@
             text-align: center;
             color:black;
 
-            @include respond(tab-port){
+            @include respond(tab-land){
                 font-size: 1.5rem;
+            }
+
+            @include respond(phone){
+                font-size: 2rem;
             }
         }
     }
@@ -178,8 +169,12 @@
 
 @mixin respond($breakpoint) {
 
+    @if $breakpoint == small-resolution{
+        @media (max-width: 22.5em) { @content };
+    }
+
     @if $breakpoint == small-phone{
-        @media (max-width: 26.25em) { @content };
+        @media (max-width: 28.75em) { @content };
     }
 
     @if $breakpoint == phone{

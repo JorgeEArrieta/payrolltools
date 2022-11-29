@@ -4,9 +4,17 @@
     justify-content: center;
     align-items: center;
     // Medidas del contenedor.
-    height: 80vh;
+    height: 90vh;
     // Colores.
     background-color: whitesmoke;
+
+    @include respond(tab-land){
+        height: 70vh;
+    }
+
+    @include respond(tab-port){
+        height: 70vh;
+    }
 
     @include respond(phone){
         // Medidas del contenedor.
@@ -27,7 +35,6 @@
         url("../img/black-and-white-tables-chairs-people.jpg");
         border-radius: 1.5rem;
 
-        
         @include respond(tab-port){
             margin: 0;
         }
@@ -99,9 +106,13 @@
             align-self: center;
             flex-direction: row;
             // Medidas del contenedor.
-            margin: 1.5rem;
-            height: 80%;
-            width: 90%;
+            margin: 0.5rem;
+            height: 90%;
+            width: 70%;
+
+            @include respond(tab-land){
+                width: 85%;
+            }
             
             @include respond(phone){
                 // Definición y alineación contendor.
@@ -109,6 +120,10 @@
                 // Medidas del contenedor.
                 margin: 0.5rem;
                 height: 80%;
+                width: 80%;    
+            }
+
+            @include respond(tab-port){
                 width: 80%;    
             }
 
@@ -120,7 +135,7 @@
 
                     h3{
                         @include cardTitleH3;
-                        top:55%;
+                        top:40%;
                         left:30%;
 
                         @include respond(tab-port){
