@@ -1,6 +1,13 @@
 // Importación de modulos.
-const fs = require('fs');
-const http = requiere('http');
+const express = require('express');
 
-const saludo = 'Hola mundo';
-console.log(saludo);
+//Página principal
+const app = express();
+
+app.get('/', (req, res) => {
+    res.status(200).send('Hooooollaaa');
+});
+
+app.listen(8000, ()=>{
+    console.log("Escuchando en puerto 8000");
+});
