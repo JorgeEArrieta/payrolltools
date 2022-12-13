@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "name": "Impuesto a las ganancias - Segunda deducción",
+        "Descripción": "lorem",
+        "Requerimientos tecnicos":{
+            "procesador": "Pentium",
+            "RAM": "4G",
+            "Sistema operativo": "Windows (64bits)"
+        }
+    },
+
+    {
+        "id": 2,
+        "name": "Payroll Tools - Formulario 1357",
+        "Descripción": "lorem",
+        "Requerimientos tecnicos":{
+            "procesador": "Pentium",
+            "RAM": "4G",
+            "Sistema operativo": "Windows (64bits)"
+        }
+    },
+
+    {
+        "id": 3,
+        "name": "Payroll Tools - Extractor SIRADIG",
+        "Descripción": "lorem",
+        "Requerimientos tecnicos":{
+            "procesador": "Pentium",
+            "RAM": "4G",
+            "Sistema operativo": "Windows (64bits)"
+        }
+    }
+]
+    
+
